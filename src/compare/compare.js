@@ -42,13 +42,14 @@ const skills_in_resume = (resume, job_skills) => {
 export const compare = (resume, job) => {
   const job_skills = skills_in_job(job)
   const resume_skills = skills_in_resume(resume, job_skills)
-  const compare = {}
+  const compare = []
 
   Object.keys(job_skills).forEach(skill => {
-    compare[skill] = {
+    compare.push({
+      'skill': skill,
       'job': job_skills[skill],
       'resume': resume_skills[skill],
-    }
+    })
   })
   return compare
 }
