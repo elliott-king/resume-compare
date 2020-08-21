@@ -2,12 +2,14 @@ import React, {useState} from 'react';
 import './App.css';
 import ResumeInput from './components/resume-input'
 import JobInput from './components/job-input'
+import {compare} from './compare/compare'
 
 function App() {
   const [resume, changeResume] = useState("")
   const [job, changeJob] = useState("")
   const handleSubmit = (event) => {
-    console.log("You submitted! Congratulations!")
+    const skillSet = compare(resume, job)
+    console.log(skillSet)
   }
 
   return (
