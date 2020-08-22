@@ -1,10 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+#root{
+  position: absolute;
+  width: 100vw;
+  /* text-align: center; */
+}
 .App {
-  text-align: center;
+  width: 90%;
+  font-family: 'Poppins', sans-serif;
+  padding: 20px 5%;
+  /* border: 5px solid red; */
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+#submit{
+  position: relative;
+  margin-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.main{
+  display: flex;
+  flex-direction: row;
+  flex-flow: row;
+  width: 100%;
+  /* border: 2px solid blue; */
+}
+
+.input-container{
+  position: flex;
+  flex-direction: row;
+  width: 70%;
+  /* border: 4px solid green; */
+}
+
+textarea{
+  position: flex;
+  flex-direction: column;
+  width: 95%;
+  height: 40vh;
+  padding: 5px;
+  resize: none;
+  overflow: scroll;
+}
+
+.skill-table{
+  position: flex;
+  flex-direction: row;
+  width: 28%;
+  /* overflow: scroll; */
+  /* border: 4px solid yellow; */
+}
+
+thead{
+  display: block;
+  width: 100%;
+}
+
+tbody{
+  width: 100%;
+  height: 670px;
+  display: block;
+  overflow: scroll;
+}
+
+.header-row{
+  background-color: rgb(78, 78, 78);
+  font-weight: 500;
+  color: white;
 }
 
 @media (prefers-reduced-motion: no-preference) {

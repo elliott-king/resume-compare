@@ -22,10 +22,16 @@ function App() {
 
   return (
     <div className="App">
-      <ResumeInput changeResume={changeResume} resume={resume}/>
-      <JobInput changeJob={changeJob} job={job}/>
       <button id="submit" onClick={handleSubmit}>Check Resume</button>
-      {renderSkills()}
+      <div className="main">
+        <div className="input-container">
+          <ResumeInput changeResume={changeResume} resume={resume}/>
+          <JobInput changeJob={changeJob} job={job}/>
+        </div>
+        <div className="skill-table">
+          {renderSkills()}
+        </div>
+      </div>
     </div>
   );
 }

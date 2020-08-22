@@ -3,12 +3,12 @@ import React from 'react';
 const SkillTable = (props) => {
   const skills = props.skills
   return (
-    <table>
-      <thead>
+    <table width="100%" border="0" cellPadding="5" cellSpacing="0">
+      <thead className="header-row">
         <tr>
-          <td>Skill</td>
-          <td>Resume</td>
-          <td>Job</td>
+          <td width="50%">Skill</td>
+          <td width="25%" align="right">Resume</td>
+          <td width="25%" align="right">Job</td>
         </tr>
       </thead>
       <tbody>
@@ -26,9 +26,9 @@ const SkillRow = (props) => {
   const skill = props.skill 
   return (
     <tr>
-      <td>{skill.skill}</td>
-      <td>{skill.resume ? skill.resume : "🚫"}</td>
-      <td>{skill.job}</td>
+      <td width="50%">{skill.skill}</td>
+      <td width="25%" align="right">{skill.resume ? skill.resume : "🚫"}</td>
+      <td width="25%" align="right">{skill.job}</td>
     </tr>
   )
 }
