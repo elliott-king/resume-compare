@@ -54,20 +54,33 @@ textarea{
   position: flex;
   flex-direction: row;
   width: 28%;
-  /* overflow: scroll; */
-  /* border: 4px solid yellow; */
+  height: calc(80vh + 25px);
 }
 
-thead{
-  display: block;
+table {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
   width: 100%;
 }
-
-tbody{
-  width: 100%;
-  height: 670px;
+table thead {
+  /* head takes the height it requires, 
+  and it's not scaled when table is resized */
+  flex: 0 0 auto;
+  width: calc(100% - 0.9em);
+}
+table tbody {
+  /* body takes all the remaining available space */
+  flex: 1 1 auto;
   display: block;
-  overflow: scroll;
+  overflow-y: scroll;
+}
+table tbody tr {
+  width: 100%;
+}
+table thead, table tbody tr {
+  display: table;
+  table-layout: fixed;
 }
 
 .header-row{
