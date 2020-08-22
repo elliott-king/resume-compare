@@ -103,7 +103,8 @@ table thead, table tbody tr {
   .skill-table {
     width: 75%;
     margin: auto;
-    padding-top: 1em
+    padding-top: 1em;
+    height: auto;
   }
   table thead {
     width: 100%
