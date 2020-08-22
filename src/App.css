@@ -89,32 +89,26 @@ table thead, table tbody tr {
   color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+@media only screen and (max-width: 850px) {
+  .main {
+    flex-direction: column;
+    flex-flow: column;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .input-container {
+    margin: auto;
+    width: 90%;
   }
-  to {
-    transform: rotate(360deg);
+  .skill-table {
+    width: 75%;
+    margin: auto;
+    padding-top: 1em
+  }
+  table thead {
+    width: 100%
+  }
+  table tbody {
+    overflow-y: visible;
   }
 }
