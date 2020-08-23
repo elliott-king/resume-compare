@@ -4,6 +4,7 @@ import ResumeInput from './components/resume-input'
 import JobInput from './components/job-input'
 import SkillTable from './components/skill-table'
 import {compare} from './compare/compare'
+import Logo from './images/res-comp_logo_white.png'
 
 function App() {
   const [resume, changeResume] = useState("")
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <div className="App">
+      <img id="logo" src={Logo}/>
       <button id="submit" onClick={handleSubmit}>Check Resume</button>
       <div className="main">
         <div className="input-container">

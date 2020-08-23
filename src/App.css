@@ -3,7 +3,7 @@
 #root{
   position: absolute;
   width: 100vw;
-  /* text-align: center; */
+  text-align: center;
 }
 .App {
   width: 90%;
@@ -11,18 +11,31 @@
   padding: 20px 5%;
   /* border: 5px solid red; */
 }
-
+#logo{
+  position: relative;
+  display: inline-block;
+  width: 350px;
+  margin-bottom: -20px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
 #submit{
-  position: relative;
-  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 20px;
   border: 1px solid black;
   border-radius: 5px;
   padding: 5px;
+  background-color: rgb(78, 78, 78);
+  color: white;
+  cursor: pointer;
+}
+#submit:hover{
+  background-color: rgb(58, 142, 45);
+  border: 1px solid green;
 }
 
 .main{
@@ -30,7 +43,6 @@
   flex-direction: row;
   flex-flow: row;
   width: 100%;
-  /* border: 2px solid blue; */
 }
 
 .input-container{
@@ -46,6 +58,7 @@ textarea{
   width: 95%;
   height: 40vh;
   padding: 5px;
+  border: 1px solid black;
   resize: none;
   overflow: scroll;
 }
