@@ -9,21 +9,16 @@ import Logo from './images/res-comp_logo_white.png'
 function App() {
   const [resume, changeResume] = useState("")
   const [job, changeJob] = useState("")
-  const [skillSet, changeSkillSet] = useState(null)
+  const [skillSet, changeSkillSet] = useState([])
 
   const handleSubmit = (event) => {
     const skillSet = compare(resume, job)
     changeSkillSet(skillSet)
   }
 
-  const renderSkills = () => {
-    if (!skillSet) return null
-    return <SkillTable skills={skillSet} />
-  }
-
   return (
     <div className="App">
-      <img id="logo" src={Logo}/>
+      <img alt="logo" id="logo" src={Logo}/>
       <button id="submit" onClick={handleSubmit}>Check Resume</button>
       <div className="main">
         <div className="input-container">
@@ -31,7 +26,7 @@ function App() {
           <JobInput changeJob={changeJob} job={job}/>
         </div>
         <div className="skill-table">
-          {renderSkills()}
+          <SkillTable skills={skillSet} />
         </div>
       </div>
     </div>
