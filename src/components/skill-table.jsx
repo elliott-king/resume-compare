@@ -6,7 +6,7 @@ const SkillTable = (props) => {
     <table width="100%" border="0" cellPadding="5" cellSpacing="0">
       <thead className="header-row">
         <tr>
-          <td width="50%">Skill</td>
+          <td width="50%" align="left">Skill</td>
           <td width="25%" align="right">Resume</td>
           <td width="25%" align="right">Job</td>
         </tr>
@@ -26,7 +26,7 @@ const SkillRow = (props) => {
   const skill = props.skill 
   return (
     <tr>
-      <td width="50%">{skill.skill}</td>
+      <td width="50%" align="left">{skill.skill}</td>
       <td width="25%" align="right">{skill.resume ? skill.resume : "🚫"}</td>
       <td width="25%" align="right">{skill.job}</td>
     </tr>
