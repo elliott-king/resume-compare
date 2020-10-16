@@ -12,23 +12,33 @@ function App() {
   const [skillSet, changeSkillSet] = useState([])
 
   const handleSubmit = (event) => {
+    event.preventDefault()
     const skillSet = compare(resume, job)
     changeSkillSet(skillSet)
+  }
+
+  const handleKeyDown = (event) => {
+    if (event.keyCode === 13 && event.metaKey) {
+      const skillSet = compare(resume, job)
+      changeSkillSet(skillSet)
+    }
   }
 
   return (
     <div className="App">
       <img alt="logo" id="logo" src={Logo}/>
-      <button id="submit" onClick={handleSubmit}>Check Resume</button>
-      <div className="main">
-        <div className="input-container">
-          <ResumeInput changeResume={changeResume} resume={resume}/>
-          <JobInput changeJob={changeJob} job={job}/>
+      <form onSubmit={handleSubmit} onKeyDown={handleKeyDown}>
+        <button id="submit">Check Resume</button>
+        <div className="main">
+          <div className="input-container">
+            <ResumeInput changeResume={changeResume} resume={resume}/>
+            <JobInput changeJob={changeJob} job={job}/>
+          </div>
+          <div className="skill-table">
+            <SkillTable skills={skillSet} />
+          </div>
         </div>
-        <div className="skill-table">
-          <SkillTable skills={skillSet} />
-        </div>
-      </div>
+      </form>
     </div>
   );
 }
