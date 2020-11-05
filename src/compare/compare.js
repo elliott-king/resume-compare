@@ -1,4 +1,4 @@
-import {skills} from './skills'
+import skills from './skills.json'
 
 // escape possible special characters in a string
 // https://stackoverflow.com/questions/4371565/

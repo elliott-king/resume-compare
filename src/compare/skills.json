@@ -1,6 +1,4 @@
-// taken from https://raw.githubusercontent.com/varadchoudhari/LinkedIn-Skills-Crawler/master/output/all_skills.txt
-
-export const skills = [
+[
 	"(ISC)2",
 	".NET",
 	".NET CLR",
@@ -27722,6 +27720,7 @@ export const skills = [
 	"Railroad Engineering",
 	"Railroad Law",
 	"Railroad Litigation",
+	"Rails",
 	"Rails Core Team",
 	"Railway Signalling",
 	"Railway Systems",
@@ -32246,6 +32245,7 @@ export const skills = [
 	"Style Manager",
 	"Style Sheets",
 	"StyleCop",
+	"Styled Components",
 	"Styling",
 	"Stylism",
 	"Stylistic Editing",
