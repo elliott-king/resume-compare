@@ -27,18 +27,27 @@ function App() {
   return (
     <div className="App">
       <img alt="logo" id="logo" src={Logo}/>
-      <form onSubmit={handleSubmit} onKeyDown={handleKeyDown}>
-        <button id="submit">Check Resume</button>
-        <div className="main">
-          <div className="input-container">
-            <ResumeInput changeResume={changeResume} resume={resume}/>
-            <JobInput changeJob={changeJob} job={job}/>
+      <div className="contents">
+        <form onSubmit={handleSubmit} onKeyDown={handleKeyDown}>
+          <div className="top">
+            <button id="submit">Check Resume</button>
+            <div className="hidden-text-container">
+              <span className={resume || job ? "visible-text" : "hidden-text"}>
+                Or submit with <em>&lt;CMD&gt;-&lt;Enter&gt;</em> or <em>&lt;Win&gt;-&lt;Enter&gt;</em>
+              </span>
+            </div>
           </div>
-          <div className="skill-table">
-            <SkillTable skills={skillSet} />
+          <div className="main">
+            <div className="input-container">
+              <ResumeInput changeResume={changeResume} resume={resume}/>
+              <JobInput changeJob={changeJob} job={job}/>
+            </div>
+            <div className="skill-table">
+              <SkillTable skills={skillSet} />
+            </div>
           </div>
-        </div>
-      </form>
+        </form>
+      </div>
     </div>
   );
 }

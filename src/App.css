@@ -21,6 +21,30 @@
   pointer-events: none;
 }
 
+.contents {
+  margin-top: 1.5em;
+}
+
+.top {
+  display: flex;
+}
+
+.hidden-text-container {
+  position: relative;
+  display: flex;
+  flex-grow: 1;
+}
+
+.visible-text {
+  bottom: 25%;
+  position: absolute;
+  font-size: small;
+}
+
+.hidden-text {
+  display: none;
+}
+
 #submit{
   display: flex;
   flex-direction: column;
@@ -113,7 +137,9 @@ footer {
     flex-direction: column;
     flex-flow: column;
   }
-
+  .visible-text {
+    display: none;
+  }
   .input-container {
     margin: auto;
     width: 90%;
